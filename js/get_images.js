@@ -35,12 +35,15 @@
 	}
 	
 	function show_options(largeImages,body_element)
-	{
-		body_element.append('<div id="coverup" style="position:absolute; top:0; left:0; right:0; bottom:0; background-color:red; z-index:86753;"><div id="cancelButton">Cancel</div></div>');
+	{	
+		var page_length = $(document).height();
+		body_element.append('<div id="coverup" style="position:absolute; display:block; top:0; left:0; right:0; height:'+page_length+'; background-color:red; z-index:86753;"><div id="cancelButton">Cancel</div></div>');
 		var coverDiv = $('#coverup');
 		var cancelButton = $('#cancelButton').click(cancelShare);
-		largeImages.each(function (index, domEle) {
-			coverDiv.append(largeImages.clone());
+		var imagesClone = largeImages.clone();
+		imagesClone.each(function (index, domEle) {
+			var img = imagesClone[index];
+			coverDiv.append(img);
 		});
 	}
 	

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<a href="javascript:void((function(){var e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://sites.localhost.com/saveit/js/get_images.js?r='+Math.random()*99999999);document.body.appendChild(e)})());" title="Share It" id='ShareItButton'><Strong>Share It</Strong></a>
+	<a href="javascript:void((function(){var e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('id','saveitbookmarklet');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://sites.localhost.com/saveit/js/get_images.js?r='+Math.random()*99999999);document.body.appendChild(e)})());" title="Share It" id='ShareItButton'><Strong>Share It</Strong></a>
 	<section id="photos">
 
 		<?php for ($i=0; $i < 30; $i++) {
